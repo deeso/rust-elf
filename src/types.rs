@@ -401,9 +401,11 @@ impl FileHeader {
     }
 }
 
+
+
 impl fmt::Display for FileHeader {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        write!(f, "File Header for {} {} Elf {} for {} {}", self.class, self.data,
+        write!(f, "File Header: Class: {} Data: {} Type: {} ABI: {} Machine: {}", self.class, self.data,
             self.elftype, self.osabi, self.machine)
     }
 }
